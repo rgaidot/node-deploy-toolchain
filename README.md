@@ -20,7 +20,8 @@ docker build --squash . -t node-deploy-toolchain
 ### Push your docker image on your AWS ECR
 
 ```
-docker tag node-deploy-toolchain ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/node-deploy-toolchain:latest
+docker tag node-deploy-toolchain ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/node-deploy-toolchain
+docker push ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/node-deploy-toolchain
 ```
 
 ### Usage
