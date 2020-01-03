@@ -1,6 +1,6 @@
 FROM node:12-alpine
 
-RUN apk add --no-cache jq curl make g++ git python py-pip
+RUN apk add --no-cache jq curl make groff g++ git python py-pip
 RUN pip install awscli
 RUN apk --purge -v del py-pip
 
@@ -14,4 +14,4 @@ RUN chmod +x /usr/local/bin/kompose
 RUN chmod +x /usr/local/bin/kops
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD  ["/bin/sh"]
+CMD ["/bin/sh"]
