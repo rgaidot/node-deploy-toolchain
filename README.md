@@ -1,6 +1,7 @@
 # node-deploy-toolchain
 
-A toolchain to build, test and deploy javascript applications. node-deploy-toolchain use [Vault](https://www.vaultproject.io) to set environment variables
+A toolchain to build, test and deploy javascript applications. node-deploy-toolchain use [Vault](https://www.vaultproject.io) to set environment variables.
+This image is available on [Docker Hub](https://hub.docker.com/r/rgaidot/node-deploy-toolchain)
 
 ## Pre-requisites
 
