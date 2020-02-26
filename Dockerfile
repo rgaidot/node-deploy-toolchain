@@ -1,11 +1,14 @@
 FROM node:12-alpine
 
-RUN apk add --no-cache jq curl make groff g++ git python py-pip
-RUN pip install awscli
-RUN apk --purge -v del py-pip
-RUN mkdir '/app'
-
 ENV AWS_REGION "eu-west-1"
+
+RUN apk add --no-cache curl jq g++ git groff make python py-pip && \
+  rm -f /var/cache/apk/* && \
+  pip install awscli
+
+RUN apk --purge -v del py-pip
+
+RUN mkdir '/app'
 
 ADD entrypoint.sh /usr/local/bin/
 
